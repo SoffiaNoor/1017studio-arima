@@ -18,14 +18,9 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $slider = Slider::all();
         $information = Information::first();
-        $commercial = Commercial::first();
-        $residential = Residential::first();
-        $factory = Factory::first();
-        $disinfection = Disinfection::first();
 
-        return view('index', compact('information', 'slider', 'commercial', 'residential', 'factory', 'disinfection'));
+        return view('contacts.index', compact('information'));
     }
 
     public function test_view()
@@ -37,17 +32,13 @@ class ContactController extends Controller
         try {
             // Validate the form input
             $this->validate($request, [
-                'first_name' => 'required',
+                'name' => 'required',
                 'email' => 'required|email',
-                'phone_number' => 'required',
-                'company' => 'required',
                 'message' => 'required|string',
             ], [
-                'first_name.required' => 'First name is required.',
+                'name.required' => 'Name is required.',
                 'email.required' => 'Email is required.',
                 'email.email' => 'Email must be in a valid format.',
-                'phone_number.required' => 'Phone number is required.',
-                'company.required' => 'Company is required.',
                 'message.required' => 'Message is required.',
                 'message.string' => 'Message must be a string.',
             ]);
@@ -56,9 +47,9 @@ class ContactController extends Controller
 
             Contact::create($formData);
 
-            Mail::to($formData['email'])->send(new TestEmail($formData));
+            // Mail::to($formData['email'])->send(new TestEmail($formData));
 
-            Mail::to('1017website@gmail.com')->send(new ContactMail($formData));
+            // Mail::to('1017website@gmail.com')->send(new ContactMail($formData));
 
             return redirect()->route('home', '#contactform')->with(['success' => 'You have already submitted the form!']);
         } catch (\Exception $e) {

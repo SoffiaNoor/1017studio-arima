@@ -18,9 +18,11 @@ class Information extends Model
         'image',
         'slogan',
         'description',
+        'description_eng',
         'address',
         'email',
         'phone',
         'google_map',
+        'website_link',
     ];
 }

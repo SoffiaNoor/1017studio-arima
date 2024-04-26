@@ -17,5 +17,6 @@ class Commercial extends Model
         'description_eng',
         'background',
         'list_type',
+        'list_type_eng',
     ];
 }
