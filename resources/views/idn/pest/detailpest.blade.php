@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div
+<div class="bg-stay bg-stay2"
     style="height: 40%; min-height: 30%; background-image: url('{{ env('APP_URL') . $bug->header_image }}'); background-size: cover;">
 </div>
 <div class="pt-3">
@@ -57,7 +57,9 @@
                                 </div>
                                 <p class="text-center" style="margin-bottom: -3px;font-weight: 600;">
                                     {{$bugType->title_bugs}}</p>
+                                @if($bugType->latin_title != '-')
                                 <p class="text-center" style="font-style: italic">{{$bugType->latin_title}}</p>
+                                @endif
                             </div>
                             @endforeach
                         </div>

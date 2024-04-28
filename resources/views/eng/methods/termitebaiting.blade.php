@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div
+<div class="bg-stay bg-stay2"
     style="height: 40%; min-height: 30%; background-image: url('{{ env('APP_URL') . $termitebaiting->header_image }}'); background-size: cover;">
 </div>
 <div class="pt-3">
