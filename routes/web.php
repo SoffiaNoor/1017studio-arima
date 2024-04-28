@@ -37,13 +37,13 @@ Route::get('/pest', [PestController::class, 'index']);
 Route::get('/otherpest', [PestController::class, 'other']);
 Route::get('/otherpest/{id}', [PestController::class, 'otherpest'])->name('otherpest.show');
 Route::get('/pest/{id}', [PestController::class, 'show'])->name('bug.show');
-Route::get('/contact_us', [ContactController::class, 'index']);
+Route::get('/contact_us', [ContactController::class, 'index'])->name('contact.us');
 Route::post('/store', [ContactController::class, 'store'])->name('store-contact');
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
 
 // ENG Version
-Route::get('/eng', [HomeController::class, 'index_eng'])->name('home');
+Route::get('/eng', [HomeController::class, 'index_eng'])->name('home_eng');
 Route::get('/commercial_eng', [ServiceController::class, 'commercial_eng']);
 Route::get('/residential_eng', [ServiceController::class, 'residential_eng']);
 Route::get('/industrial_eng', [ServiceController::class, 'industrial_eng']);
@@ -58,3 +58,6 @@ Route::get('/otherpest_eng/{id}', [PestController::class, 'otherpest_eng'])->nam
 Route::get('/pest_eng/{id}', [PestController::class, 'show_eng'])->name('bug.show_eng');
 Route::get('/news_eng', [NewsController::class, 'index_eng']);
 Route::get('/news_eng/{id}', [NewsController::class, 'show_eng'])->name('news.show_eng');
+Route::get('/contact_us_eng', [ContactController::class, 'index_eng'])->name('contact.us_eng');
+Route::post('/store_eng', [ContactController::class, 'store_eng'])->name('store-contact_eng');
+

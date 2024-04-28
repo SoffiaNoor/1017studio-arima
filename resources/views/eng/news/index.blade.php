@@ -51,6 +51,55 @@
     @endforeach
 </div>
 
+<div class="container">
+    <div class="col-sm-12">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end pt-4">
+                @if ($news->currentPage() > 1)
+                <li class="page-item">
+                    <a class="page-link" href="{{ $news->previousPageUrl() }}" tabindex="-1" style="border:none;">
+                        <i class="fa fa-angle-left"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                @else
+                <li class="page-item disabled">
+                    <a class="page-link" href="javascript:;" tabindex="-1" style="border:none;">
+                        <i class="fa fa-angle-left"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                @endif
+
+                @for ($i = 1; $i <= $news->lastPage(); $i++)
+                    <li class="page-item {{ $i == $news->currentPage() ? 'active' : '' }}"
+                        style="background-color: white !important;border:none">
+                        <a class="page-link fw-bold" href="{{ $news->url($i) }}"
+                            style="border:none;{{ $i == $news->currentPage() ? 'color:#dc3545!important;background-color: white !important;border:none;' : '' }}">
+                            {{ $i }}
+                        </a>
+                    </li>
+                    @endfor
+
+                    @if ($news->currentPage() < $news->lastPage())
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $news->nextPageUrl() }}" style="border:none;color:#dc3545">
+                                <i class="fa fa-angle-right"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                        @else
+                        <li class="page-item disabled">
+                            <a class="page-link" href="javascript:;" style="border:none;color:#dc3545">
+                                <i class="fa fa-angle-right"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                        @endif
+            </ul>
+        </nav>
+    </div>
+</div>
 
 <div class="mt-5 pt-5">
     <div class="container">

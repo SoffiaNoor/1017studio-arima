@@ -12,18 +12,16 @@
 
     <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
 
-        <h1>Notifikasi Pengisian Formulir Website UD NUSA RAYA</h1>
+        <h1>Notifikasi Pengisian Formulir Website ARIMA</h1>
 
-        <p>Halo UD NUSA RAYA,</p>
+        <p>Halo ARIMA,</p>
 
         <p>Anda menerima notifikasi bahwa seorang pengguna telah mengisi formulir.</p>
 
         <p>Berikut adalah detail yang diberikan oleh pengguna:</p>
         <ul>
-            <li><strong>Nama:</strong> {{ $formData['first_name'] }}</li>
+            <li><strong>Nama:</strong> {{ $formData['name'] }}</li>
             <li><strong>Email:</strong> {{ $formData['email'] }}</li>
-            <li><strong>Nomor Telepon:</strong> {{ $formData['phone_number'] }}</li>
-            <li><strong>Perusahaan:</strong> {{ $formData['company'] }}</li>
         </ul>
 
         <p><strong>Pesan:</strong></p>
@@ -34,7 +32,7 @@
         <p>Terima kasih atas perhatiannya.</p>
 
         <p>Hormat Kami,</p>
-        <p>[UD NUSA RAYA]</p>
+        <p>[ARIMA]</p>
 
     </div>
 

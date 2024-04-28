@@ -26,7 +26,7 @@ class NewsController extends Controller
     public function index_eng()
     {
         $information = Information::first();
-        $news = News::all();
+        $news = News::paginate(6);
         return view('eng.news.index', compact('information', 'news'));
     }
 

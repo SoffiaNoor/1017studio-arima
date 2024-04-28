@@ -186,9 +186,9 @@
                             <a class="dropdown-item" href="/otherpest_eng">Other</a>
                         </div>
                     </li>
-                    <li class="nav-item" style="place-content: center;"><a class="nav-link" href="/contact_us">Contact
+                    <li class="nav-item" style="place-content: center;"><a class="nav-link" href="/contact_us_eng">Contact
                             Us</a></li>
-                    <li class="nav-item" style="place-content: center;"><a class="nav-link" href="/news">News</a></li>
+                    <li class="nav-item" style="place-content: center;"><a class="nav-link" href="/news_eng">News</a></li>
                     <li class="nav-item" style="place-content: center;">
                         <a href="/" class="nav-link" style="background-color: #676566;padding:3px!important">
                             <div class="flag-icon"></div>

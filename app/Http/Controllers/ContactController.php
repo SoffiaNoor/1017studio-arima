@@ -5,14 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Information;
-use App\Models\Slider;
-use App\Models\Commercial;
-use App\Models\Factory;
-use App\Models\Disinfection;
-use App\Models\Residential;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
 use App\Mail\TestEmail;
+use App\Mail\ContactMailEng;
+use App\Mail\TestEmailEng;
 
 class ContactController extends Controller
 {
@@ -47,13 +44,54 @@ class ContactController extends Controller
 
             Contact::create($formData);
 
-            // Mail::to($formData['email'])->send(new TestEmail($formData));
+            Mail::to($formData['email'])->send(new TestEmail($formData));
 
-            // Mail::to('1017website@gmail.com')->send(new ContactMail($formData));
+            Mail::to('1017website@gmail.com')->send(new ContactMail($formData));
 
-            return redirect()->route('home', '#contactform')->with(['success' => 'You have already submitted the form!']);
+            return redirect()->route('contact.us')->with(['success' => 'You have already submitted the form!']);
         } catch (\Exception $e) {
-            return redirect()->route('home', '#contactform')->with('error', 'Failed to save the data. Put in a valid format.');
+            return redirect()->route('contact.us')->with('error', 'Failed to save the data. Put in a valid format.');
+        }
+    }
+
+    public function index_eng()
+    {
+        $information = Information::first();
+
+        return view('contacts.index_eng', compact('information'));
+    }
+
+    public function test_view_eng()
+    {
+        return view('emails.contact_eng');
+    }
+    public function store_eng(Request $request)
+    {
+        try {
+            // Validate the form input
+            $this->validate($request, [
+                'name' => 'required',
+                'email' => 'required|email',
+                'message' => 'required|string',
+            ], [
+                'name.required' => 'Name is required.',
+                'email.required' => 'Email is required.',
+                'email.email' => 'Email must be in a valid format.',
+                'message.required' => 'Message is required.',
+                'message.string' => 'Message must be a string.',
+            ]);
+
+            $formData = $request->all();
+
+            Contact::create($formData);
+
+            Mail::to($formData['email'])->send(new TestEmailEng($formData));
+
+            Mail::to('1017website@gmail.com')->send(new ContactMailEng($formData));
+
+            return redirect()->route('contact.us_eng')->with(['success' => 'You have already submitted the form!']);
+        } catch (\Exception $e) {
+            return redirect()->route('contact.us_eng')->with('error', 'Failed to save the data. Put in a valid format.');
         }
     }
 }
