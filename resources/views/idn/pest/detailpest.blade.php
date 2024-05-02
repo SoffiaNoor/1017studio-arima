@@ -143,7 +143,7 @@
                         <div class="col-sm-3 pt-3">
                             <div class="m-auto p-auto text-center unique-button"
                                 style="max-width:260px;height:50px;border-radius:40px;align-content: center;">
-                                <a class="fw-bold" href="\factory" style="color: #343a40!important;">Factory
+                                <a class="fw-bold" href="\industrial" style="color: #343a40!important;">Factory
                                 </a>
                             </div>
                         </div>
