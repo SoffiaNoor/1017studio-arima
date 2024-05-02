@@ -411,7 +411,7 @@
         </div>
     </div>
 
-    <footer data-aos="fade-up" data-aos-duration="1000" style="background:#1a1a1a">
+    <footer style="background:#1a1a1a">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -425,12 +425,12 @@
                                     <div class="text-white fw-bold" style="font-size:12pt">
                                         <table>
                                             <tr>
-                                                <td style="vertical-align: top;">
+                                                <td style="vertical-align: top;padding-bottom:10px">
                                                     <img src="{{asset('assets/img/loct.png')}}"
                                                         style="width: 30px; margin-right: 10px;" />
                                                 </td>
                                                 <td style="padding-left: 10px;">
-                                                    <p>{{$information->address}}</p>
+                                                    <p style="margin-bottom:10px">{{$information->address}}</p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -445,21 +445,30 @@
                                                                 <p>Telp. :</p>
                                                             </td>
                                                             <td>
-                                                                <p>{{$information->phone_1}}</p>
-                                                                <p>{{$information->phone_2}}</p>
-                                                                <p>{{$information->phone_sms}} (SMS Only)</p>
+                                                                <p class="m-0">{{$information->phone_1}}</p>
+                                                                <p class="m-0">{{$information->phone_2}}</p>
+                                                                <p class="m-0">{{$information->phone_sms}} (SMS Only)</p>
                                                             </td>
                                                         </tr>
                                                     </table>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="vertical-align: top;">
+                                                <td style="vertical-align: top;padding-bottom:10px">
                                                     <img src="{{asset('assets/img/email.png')}}"
                                                         style="width: 30px; margin-right: 10px;" />
                                                 </td>
                                                 <td style="padding-left: 10px;">
-                                                    <p>{{$information->email}}<br>{{$information->website_link}}</p>
+                                                    <p style="margin-bottom:10px">{{$information->email}}<br>{{$information->website_link}}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="vertical-align: top;">
+                                                    <img src="{{asset('assets/img/instagram.png')}}"
+                                                        style="width: 30px; margin-right: 10px;" />
+                                                </td>
+                                                <td style="padding-left: 10px;">
+                                                    <a target="_blank" class="text-white" href="https://www.instagram.com/arimapestclean">@arimapestclean</a>
                                                 </td>
                                             </tr>
                                         </table>
