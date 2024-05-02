@@ -445,7 +445,8 @@
                                                             <td>
                                                                 <p class="m-0">{{$information->phone_1}}</p>
                                                                 <p class="m-0">{{$information->phone_2}}</p>
-                                                                <p class="m-0">{{$information->phone_sms}} (SMS Only)</p>
+                                                                <p class="m-0">{{$information->phone_sms}} (SMS Only)
+                                                                </p>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -457,16 +458,21 @@
                                                         style="width: 30px; margin-right: 10px;" />
                                                 </td>
                                                 <td style="padding-left: 10px;">
-                                                    <p style="margin-bottom:10px">{{$information->email}}<br>{{$information->website_link}}</p>
+                                                    <p style="margin-bottom:10px">
+                                                        {{$information->email}}<br>{{$information->website_link}}</p>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="vertical-align: top;">
-                                                    <img src="{{asset('assets/img/instagram.png')}}"
-                                                        style="width: 30px; margin-right: 10px;" />
+                                                    <a target="_blank" class="text-white"
+                                                        href="https://www.instagram.com/arimapestclean">
+                                                        <img src="{{asset('assets/img/instagram.png')}}"
+                                                            style="width: 30px; margin-right: 10px;" />
+                                                    </a>
                                                 </td>
                                                 <td style="padding-left: 10px;">
-                                                    <a target="_blank" class="text-white" href="https://www.instagram.com/arimapestclean">@arimapestclean</a>
+                                                    <a target="_blank" class="text-white"
+                                                        href="https://www.instagram.com/arimapestclean">@arimapestclean</a>
                                                 </td>
                                             </tr>
                                         </table>
