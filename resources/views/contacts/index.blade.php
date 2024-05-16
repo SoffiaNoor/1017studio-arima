@@ -65,10 +65,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-floating mb-3">
+                                        <div class="form-floating mb-3 ml-2">
                                             <textarea class="form-control" name="message" id="message" type="text"
-                                                placeholder="Enter your message here..." style="height: 10rem;border-radius: 20px;
-                                                height: 200px;
+                                                placeholder="Enter your message here..." style="border-radius: 20px;
+                                                height: 100px;max-width: 500px;
                                                 background: linear-gradient(180deg, #f0f0f0, #fcfcfc);
                                                 border-style: ridge;box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);"
                                                 data-sb-validations="required" required></textarea>
