@@ -22,6 +22,17 @@
     <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ElevateZoom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+
+    <!-- Lightbox2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 
     <style>
         .btn:hover {
@@ -126,6 +137,18 @@
             left: 20px;
             z-index: 9999;
         }
+
+        .ratio-16x9 {
+            background: #e6e6e6 !important;
+            color: black !important;
+        }
+
+        svg {
+            overflow: hidden;
+            vertical-align: middle;
+            color: #111111 !important;
+            opacity: 0 !important;
+        }
     </style>
 </head>
 
@@ -219,7 +242,8 @@
     </div>
 
     {{-- Contact Us --}}
-    <div data-aos="fade-up" data-aos-duration="1000" style="background-color:#111111;height:100px;align-content: center;">
+    <div data-aos="fade-up" data-aos-duration="1000"
+        style="background-color:#111111;height:100px;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 py-auto">
@@ -234,7 +258,8 @@
     </div>
 
     {{-- Service Solution Area --}}
-    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5" style="background-color:#ec1e22;align-content: center;">
+    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5"
+        style="background-color:#ec1e22;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -297,7 +322,8 @@
         </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5" style="background-color:#e6e6e6;align-content: center;">
+    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5"
+        style="background-color:#e6e6e6;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -307,7 +333,8 @@
         </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5" style="background-color:#ffffff;align-content: center;">
+    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5"
+        style="background-color:#ffffff;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -318,20 +345,26 @@
         </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5" style="background-color:#e6e6e6;align-content: center;">
+    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5"
+        style="background-color:#e6e6e6;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <h3 class="text-center fw-bold">Sebaran Wilayah</h3>
                     <hr class="text-center mx-auto mt-0 pt-0 pb-4 mb-4"
                         style="border-color: red; border-width: 3px; width: 10%;opacity: 100% !important;">
-                    <img src="assets/img/sebaran.png" style="width:100%" />
+                    <a href="{{env('APP_URL')}}{{$information->sebaran_wilayah}}" data-lightbox="gallery"
+                        data-title="Sebaran Wilayah" id="zoom-image">
+                        <img src="{{env('APP_URL')}}{{$information->sebaran_wilayah}}"
+                            style="width:100%" />
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5" style="background-color:#ffffff;align-content: center;">
+    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5"
+        style="background-color:#ffffff;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -371,7 +404,8 @@
         </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5" style="background-color:#ffffff;align-content: center;">
+    <div data-aos="fade-up" data-aos-duration="1000" class="h-auto py-5"
+        style="background-color:#ffffff;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -498,6 +532,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </script>
+    <!-- Lightbox2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- elevateZoom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
     <script>
         AOS.init();
 
