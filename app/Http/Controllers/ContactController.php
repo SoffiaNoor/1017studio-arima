@@ -27,6 +27,8 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         try {
+            $information = Information::first();
+
             // Validate the form input
             $this->validate($request, [
                 'name' => 'required',
@@ -46,7 +48,7 @@ class ContactController extends Controller
 
             Mail::to($formData['email'])->send(new TestEmail($formData));
 
-            Mail::to('1017website@gmail.com')->send(new ContactMail($formData));
+            Mail::to($information->email)->send(new ContactMail($formData));
 
             return redirect()->route('contact.us')->with(['success' => 'You have already submitted the form!']);
         } catch (\Exception $e) {
