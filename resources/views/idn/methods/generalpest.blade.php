@@ -23,6 +23,8 @@
                                     <h5 class="fw-bold text-center py-2">Konsultasi :</h5>
                                     <div class="m-auto p-auto text-center unique-button"
                                         style="width:260px;height:50px;border-radius:40px;align-content: center;">
+                                        <img src="{{asset('assets/img/icon_cs.png')}}"
+                                            style="margin-right: 10px;width:30px;max-width:40px" />
                                         <a class="fw-bold" style="color: #343a40!important;">{{$information->phone_1}}
                                         </a>
                                     </div>

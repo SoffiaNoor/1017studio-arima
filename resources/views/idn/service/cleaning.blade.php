@@ -26,6 +26,8 @@
                                     <h5 class="fw-bold text-center py-2">Konsultasi :</h5>
                                     <div class="m-auto p-auto text-center"
                                         style="background:white;width:260px;height:50px;border-radius:40px;align-content: center;">
+                                        <img src="{{asset('assets/img/icon_cs.png')}}"
+                                            style="margin-right: 10px;width:30px;max-width:40px" />
                                         <a class="fw-bold" style="color: #343a40!important;">{{$information->phone_1}}
                                         </a>
                                     </div>
@@ -38,8 +40,7 @@
         </div>
     </div>
 
-    <div class="mt-5 content-mobile"
-        style="background-color: #000; color: white;height:150px;align-content: center;">
+    <div class="mt-5 content-mobile" style="background-color: #000; color: white;height:150px;align-content: center;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 py-auto">
@@ -48,13 +49,15 @@
                         <div class="col-md-4 col-sm-6 pt-3 pb-3">
                             <div class="m-auto p-auto text-center"
                                 style="background:white;max-width:260px;height:50px;border-radius:40px;align-content: center;">
-                                <a class="fw-bold" href="\generalpest" style="color: #343a40!important;">General Pest</a>
+                                <a class="fw-bold" href="\generalpest" style="color: #343a40!important;">General
+                                    Pest</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 pt-3 pb-3">
                             <div class="m-auto p-auto text-center"
                                 style="background:white;max-width:260px;height:50px;border-radius:40px;align-content: center;">
-                                <a class="fw-bold" href="\termitebaiting" style="color: #343a40!important;">Termite Baiting</a>
+                                <a class="fw-bold" href="\termitebaiting" style="color: #343a40!important;">Termite
+                                    Baiting</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 pt-3 pb-3">
