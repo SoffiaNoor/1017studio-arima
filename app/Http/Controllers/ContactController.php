@@ -46,9 +46,9 @@ class ContactController extends Controller
 
             Contact::create($formData);
 
-            Mail::to($formData['email'])->send(new TestEmail($formData));
+            // Mail::to($formData['email'])->send(new TestEmail($formData));
 
-            Mail::to($information->email)->send(new ContactMail($formData));
+            // Mail::to($information->email)->send(new ContactMail($formData));
 
             return redirect()->route('contact.us')->with(['success' => 'You have already submitted the form!']);
         } catch (\Exception $e) {
@@ -87,9 +87,9 @@ class ContactController extends Controller
 
             Contact::create($formData);
 
-            Mail::to($formData['email'])->send(new TestEmailEng($formData));
+            // Mail::to($formData['email'])->send(new TestEmailEng($formData));
 
-            Mail::to('1017website@gmail.com')->send(new ContactMailEng($formData));
+            // Mail::to('1017website@gmail.com')->send(new ContactMailEng($formData));
 
             return redirect()->route('contact.us_eng')->with(['success' => 'You have already submitted the form!']);
         } catch (\Exception $e) {
